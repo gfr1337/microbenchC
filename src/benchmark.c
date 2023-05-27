@@ -8,7 +8,7 @@ static double convtime(struct timespec t) {
     return t.tv_sec + t.tv_nsec / 1.0e9;
 }
 
-void benchmark(int32_t n, int32_t e) {
+void picalc_benchmark(int32_t n, int32_t e) {
     struct timespec ctime;
     timespec_get(&ctime, TIME_UTC);
     double a = convtime(ctime);
