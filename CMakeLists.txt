@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.26)
+set(CMAKE_BUILD_TYPE Release)
+project(pisum)
+add_executable(pisum src/pisum.c)
+add_library(picalc src/picalc.c src/benchmark.c)
+target_include_directories(picalc PUBLIC include)
+target_link_libraries(pisum picalc)
